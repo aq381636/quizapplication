@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" /> <!--  api used for timer and next arrow  -->
+  <link rel="stylesheet" href="stylesquiz.css" /> <!-- the link the the stylesquiz.css which is used to style this html --> 
+</head>
+<body>
+
+  <!-- button allows toggle to dark mode  -->
+  <button id="darkModeToggle" class="dark-mode-btn">Toggle</button>
+
+
+ 
+  <div class="config-popup popup-container active">
+    <div class="config-container quiz-box">
+      <h2 class="title">QuizIt</h2>
+
+     
+      <div class="config-option"> <!-- different buttons users can press to pick their categories -->
+        <h4 class="option-title">Please Select a Quiz Category</h4>
+        <div class="category-options">
+          <button class="category-option">Forensic Science</button>
+          <button class="category-option">Animals</button>
+          <button class="category-option">Countries Capitals</button>
+          <button class="category-option">History</button>
+          <button class="category-option active">Chemistry</button>
+          <button class="category-option">Geography</button>
+          <button class="category-option">Space</button>
+          <button class="category-option">Biology</button>
+        </div>
+      </div>
+
+     
+      <div class="config-option"> <!-- user can pick difficulty which corresponds to number of questions -->
+        <h4 class="option-title">Select Difficulty Level </h4>
+        <div class="question-options">
+          <button class="question-option" data-questions="5">Easy</button>
+          <button class="question-option active" data-questions="15">Medium</button>
+          <button class="question-option" data-questions="20">Difficult</button>
+        </div>
+      </div>
+
+      
+      <button class="start-quiz-btn">Start The Quiz</button>
+    </div>
+  </div>
+
+  <!-- main page for when questions are displayed -->
+  <div class="quiz-popup popup-container">
+    <div class="quiz-container quiz-box">
+      <header class="quiz-header">
+        <h2 class="quiz-title">QuizIt</h2>
+        <div class="quiz-timer">
+          <span class="material-symbols-rounded">timer</span>
+          <p class="timer-duration"></p>
+        </div>
+      </header>
+
+      <div class="quiz-content">
+        <h1 class="question-text"></h1>
+        <ul class="answer-options"></ul>
+      </div>
+
+      <div class="quiz-footer">
+        <p class="question-status"></p>
+        <button class="next-question-btn">
+          Next
+          <span class="material-symbols-rounded">arrow_right_alt</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- At the end of the quiz a message is shown and user can also try again and play -->
+  <div class="result-popup popup-container">
+    <div class="result-container quiz-box">
+      <img src=".vscode/200w.gif" class="result-img" alt="Celebration GIF" /> <!-- gif  -->
+      <h2 class="result-title">You are done with the Quiz</h2>
+      <p class="result-message"></p>
+      <button class="try-again-btn">Try Again</button>
+    </div>
+  </div>
+  <script src="questionbank.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
