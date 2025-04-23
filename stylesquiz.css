@@ -21,7 +21,7 @@
 
 
 body.dark-mode {
-  background: url('.vscode/starbackground.gif');
+  background: url('starbackground.gif');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -79,7 +79,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: url('.vscode/pastelbackground.gif');
+  background: url('pastelbackground.gif');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
