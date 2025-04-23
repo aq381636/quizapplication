@@ -49,7 +49,7 @@ const startTimer = () => { // timer is started when a new question above
       quizContainer.querySelector(".quiz-timer").style.background = "#c31402";
       highlightCorrectAnswer(); //correct answer shows 
       answerOptions.querySelectorAll(".answer-option").forEach(option => option.style.pointerEvents = "none");
-    }
+    } // no answer choice can be clicked once an answer has been selected.
   }, 1000);
 };
 
@@ -78,22 +78,22 @@ const highlightCorrectAnswer = () => {
   correctOption.insertAdjacentHTML("beforeend", `<span class="material-symbols-rounded"> check_circle </span>`);
 };
 
-const handleAnswer = (option, answerIndex) => {
-  if (disableSelection) return;
+const handleAnswer = (option, answerIndex) => { // what happens when user picks answer 
+  if (disableSelection) return; // user can not pick another answer/ can't change their answer 
 
-  clearInterval(timer); // timer stopped if you can't choose an answer choice.
-  disableSelection = true;
+  clearInterval(timer); // answer selected so the timer stops
+  disableSelection = true;   // can not select until next question
 
-  const isCorrect = current.correctAnswer === answerIndex; //if the answer choice is correct is checked 
-  option.classList.add(isCorrect ? "correct" : "incorrect");
-  if (!isCorrect) highlightCorrectAnswer();
+  const isCorrect = current.correctAnswer === answerIndex; //if the answer choice is correct is checked (index is matched )
+  option.classList.add(isCorrect ? "correct" : "incorrect"); // marked correct or incorrect
+  if (!isCorrect) highlightCorrectAnswer(); // check if answer is not correct 
   else correctamount++; // if answer selected is correct add to number of correct answered questions
 
   const iconHTML = `<span class="material-symbols-rounded">${isCorrect ? "check_circle" : "cancel"}</span>`;
   option.insertAdjacentHTML("beforeend", iconHTML);
-// once user selects answer option next button is shown
+// once correct answer choice shown user can not choose any other options
   answerOptions.querySelectorAll(".answer-option").forEach(option => option.style.pointerEvents = "none");
-  nextQuestionBtn.style.visibility = "visible";
+  nextQuestionBtn.style.visibility = "visible"; // next question button visible 
 };
 
 const renderQuestion = () => { // new question 
@@ -112,7 +112,7 @@ const renderQuestion = () => { // new question
   answerOptions.innerHTML = "";
 // for question answer choices go through loop
   current.options.forEach((option, index) => {
-    const li = document.createElement("li");
+    const li = document.createElement("li");  // list item made options for answer
     li.classList.add("answer-option");
     li.textContent = option;
     answerOptions.append(li);
@@ -133,7 +133,7 @@ const startQuiz = () => {
   renderQuestion(); //quiz starts 
 };
 
-configContainer.querySelectorAll(".category-option, .question-option").forEach(option => {
+configContainer.querySelectorAll(".category-option, .question-option").forEach(option => { //user input category and difficulty selected.
   option.addEventListener("click", () => {
     option.parentNode.querySelector(".active")?.classList.remove("active");
     option.classList.add("active");
