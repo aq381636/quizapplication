@@ -91,7 +91,7 @@ const handleAnswer = (option, answerIndex) => {
 
   const iconHTML = `<span class="material-symbols-rounded">${isCorrect ? "check_circle" : "cancel"}</span>`;
   option.insertAdjacentHTML("beforeend", iconHTML);
-// once correct answer choice shown user can choose any options
+// once user selects answer option next button is shown
   answerOptions.querySelectorAll(".answer-option").forEach(option => option.style.pointerEvents = "none");
   nextQuestionBtn.style.visibility = "visible";
 };
